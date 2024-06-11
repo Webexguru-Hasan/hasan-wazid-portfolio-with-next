@@ -13,7 +13,7 @@ const Home = () => {
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl">Frontend-developer</span>
             <h1 className="h1 my-6">Hello, I am <br /> <span className="text-accent">Hasan wazid</span></h1>
-            <p className="text-white/80 max-w-[500px] mb-6 text-center xl:text-justify">I am Hasan Wazid. A Proficient Frontend Developer and CMS expert with more than 3 years of experience delivering clean, functional, and user-friendly websites for my clients. My approach is to understand your needs and work collaboratively to achieve your goals. </p>
+            <p className="text-white/80 max-w-[500px] mb-6 text-center xl:text-justify capitalize">Born in 1995 in Sylhet, Bangladesh, I believe web design can be diverse and inspiring. My mission is to explore and present the endless possibilities of web design. I continuously pursue new expressions through experimentation and thoughtful creativity.</p>
 
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
