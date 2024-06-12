@@ -9,5 +9,18 @@
   .h1{
     @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold
   }
+  .h2{
+    @apply text-[36px] xl:text-[48px] leading-[1.1] font-medium
+  }
+  .h3{
+    @apply text-[20px] xl:text-[24px] leading-[1.1] font-medium
+  }
+.text-outline {
+  -webkit-text-stroke: 1px #fff;
 }
+.text-outline-hover {
+  -webkit-text-stroke: 1px #6AF79A;
+}
+}
+
   
