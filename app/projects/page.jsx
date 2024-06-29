@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
@@ -25,7 +26,7 @@ const projects = [
       {name: "CSS 3"},
       {name: "JavaScript"},
     ],
-    image: "/assets/work/thumb1.png",
+    image: "/assets/work/tradella-international-website.png",
     live: "",
     github: ""
   },
@@ -39,7 +40,7 @@ const projects = [
       {name: "Elementor"},
       {name: "Woocomerce"},
     ],
-    image: "/assets/work/thumb2.png",
+    image: "/assets/work/Broward-Miami-health.png",
     live: "",
     github: ""
   },
@@ -49,11 +50,11 @@ const projects = [
     title: "project 3",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, odio!3",
     stack: [
-      {name: "NextJs"},
-      {name: "TailwindCss"},
-      {name: "SwiperJS"},
+      {name: "WordPress"},
+      {name: "Elementor"},
+      {name: "Hello Elementor"},
     ],
-    image: "/assets/work/thumb3.png",
+    image: "/assets/work/forisagency-website.png",
     live: "",
     github: ""
   },
@@ -64,10 +65,10 @@ const Projects = () => {
 
   const handleSlideChange = (swiper) =>{
     const currentIndex = swiper.activeIndex;
-    setWorks(projects[currentIndex])
+    setWorks(projects[currentIndex]) 
   }
   return (
-    <motion.section initial={{opacity: 0}} animate={{opacity: 1}} className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
+    <motion.section initial={{opacity: 0}} animate={{opacity: 1, transition: {delay: 2.4, duration: 0.4, ease: "easeIn"}}} className="min-h-[80vh] flex flex-col justify-center py-12">
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-8">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
@@ -126,8 +127,16 @@ const Projects = () => {
           <div className="w-full xl:w-[50%]">
             <Swiper spaceBetween={30} slidesPerView={1} className="xl:h-[520px] mb-12" onSlideChange={handleSlideChange}>
               {projects.map((project, index) => {
-                return <SwiperSlide key={index}>
-                  slide
+                return <SwiperSlide key={index} className="w-full">
+                  <div className="h-[460px] relative group flex justify-center items-center bg-pink-50 rounded-xl">
+                    {/* overlay */}
+                    <div className="absolute top-0 bottom-0 bg-black/20 w-full h-full z-10"></div>
+                    {/* image */}
+                    <div className="relative w-full h-full">
+                      <Image src={project.image} fill className="object-cover rounded-xl" alt="project-image" />
+                    </div>
+
+                  </div>
                 </SwiperSlide>
               })}
             </Swiper>
