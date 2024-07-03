@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 //react-icon
 
 
+import WorkSliderBtn from "@/components/WorkSliderBtn";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import Image from "next/image";
 import Link from "next/link";
@@ -139,6 +140,9 @@ const Projects = () => {
                   </div>
                 </SwiperSlide>
               })}
+
+              {/* slider-button */}
+              <WorkSliderBtn containerStyles="flex gap-2 z-[99] absolute right-0 xl:bottom-[5%] bottom-[calc(50%-22px)] justify-between xl:justify-none w-full xl:w-max" BtnStyles="bg-accent text-2xl w-[32px] h-[32px] flex justify-center items-center rounded bg-accent-hover transition-all" />
             </Swiper>
           </div>
         </div>
