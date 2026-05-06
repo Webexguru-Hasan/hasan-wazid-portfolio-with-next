@@ -23,8 +23,7 @@ export default function RootLayout({ children }) {
             token: "sa_pub_v1.eyJzaXRlVXJsIjoiaHR0cHM6Ly9oYXNhbi13YXppZC1wb3J0Zm9saW8udmVyY2VsLmFwcCIsImRvbWFpbiI6Imhhc2FuLXdhemlkLXBvcnRmb2xpby52ZXJjZWwuYXBwIiwiaXNzdWVkQXQiOjE3NzgwNDkyMzY1ODUsImV4cGlyZXNBdCI6MTgwOTU4NTIzNjU4NSwicGxhbiI6ImZyZWUifQ.rkIarryMw58H2hzLK5ZT3f42NFVKshhIEUoV9tg5lBs",
             position: "bottom-right",
             theme: "light",
-            primaryColor: "#E53E3E",
-            greeting: "Welcome! 🛒 How can I help you today?",
+            primaryColor: "#00e187",
             placeholder: "Ask about products, shipping, returns...",
             leadCapture: true
           }`}
